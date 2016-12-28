@@ -126,7 +126,12 @@
 	color: #fff;
 	opacity: 1;
 }
+.Navbar .dropdown > .dropdown-label {
+	padding-right: 1em;
+}
 .Navbar .dropdown > .dropdown-label::after {
+	position: absolute;
+	right: 0.2em;
 	content: '\25bc';
 	font-size: 0.5em;
 	font-weight: 300;

@@ -1,0 +1,74 @@
+a.DateCard {
+	color: #333;
+}
+a.DateCard::before {
+	display: none;
+}
+a.DateCard::after {
+	  display: none;
+}
+
+.DateCard {
+	display: inline-block;
+	width: 100%;
+	margin: 1em 0 0 0;
+	box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+.DateCard:hover {
+	box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+
+.DateCard .date {
+	position: relative;
+	color: #E67E00;
+	padding: 0.5em;
+	font-size: 1.5em;
+	display: inline-block;
+	height: 3em;
+	width: 40%;
+	box-sizing: border-box;
+	vertical-align: middle;
+}
+.DateCard .date-time {
+	font-size: 0.66em;
+	color: #333;
+}
+.DateCard .date::after {
+	position: absolute;
+	content: '';
+	display: inline-block;
+	right: 1em;
+	height: 80%;
+	top: 10%;
+	width: 1px;
+	background-color: #dedede;
+}
+
+.DateCard .event {
+	display: inline-block;
+	padding-left: 1em;
+	white-space: normal;
+	width: 60%;
+	box-sizing: border-box;
+	vertical-align: middle;
+	line-height: 1.2em;
+}
+
+.DateCard .event .event-name {
+	font-weight: 500;
+	color: #333;
+}
+.DateCard .event .event-description {
+	color: #333;
+}
+.DateCard .event .event-urgent {
+	font-weight: 500;
+	color: #ee0000;
+}
+
+@media (min-width: 992px) {
+	.DateCard {
+		width: 45%;
+		margin: 1em 1em 0 0;
+	}
+}
