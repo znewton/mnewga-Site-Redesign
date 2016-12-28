@@ -102,7 +102,7 @@
 	/*opacity: 0.3;*/
 }
 .has-hero #navbar:not(.scrolled) a:hover::after {
-	display: none;
+	/*display: none;*/
 }
 
 
@@ -126,7 +126,14 @@
 	color: #fff;
 	opacity: 1;
 }
-
+.dropdown > .dropdown-label::after {
+	content: '\25bc';
+	font-size: 0.5em;
+	font-weight: 300;
+	padding-left: 0.35em;
+	display: inline-block;
+	vertical-align: middle;
+}
 .dropdown.open > .dropdown-label::before {
 	background-color: #1e1e1e;
 	opacity: 0.6;

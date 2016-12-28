@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ContactCard from '../Components/ContactCard/ContactCard';
+import ContactCard from '../../Components/ContactCard/ContactCard';
 
 class Committee extends Component {
 	render() {

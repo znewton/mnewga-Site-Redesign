@@ -163,7 +163,9 @@ class Rules extends Component {
 		var rulePrint = rules.map((rule, i) => (
 			<div key={i}>
 				<h3>{i+1}. {rule.title}</h3>
-				{rule.description}
+				<div style={{paddingLeft: '1em'}}>
+					{rule.description}
+				</div>
 			</div>
 		));
 		return (

@@ -44,7 +44,7 @@ class Navbar extends Component {
 			]},
 			{url:'', label: 'Events', sublinks: [
 				{url: '/9holeEvent', label: '9-Hole Event Schedule'},
-				{url: '/9holeMatch', label: '9-Hole Math Play Event'},
+				{url: '/9holeMatch', label: '9-Hole Match Play Event'},
 				{url: '/18holeEvent', label: '18-Hole Event Schedule'},
 				{url: '/clubChamp', label: 'Club Championship'},
 				{url: '/dayTrip', label: 'Day Trip Golf Outing'},
