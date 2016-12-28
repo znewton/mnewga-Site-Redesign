@@ -39,7 +39,7 @@
 	/*padding: 0.1em auto;*/
 	display: inline-block;
 	vertical-align: middle;
-	height: 5vw;
+	height: 14vw;
 	width: auto;
 	opacity: 1;
 }
@@ -112,7 +112,8 @@
 	}
 	.Navbar a.home-link > svg,
 	.Navbar a.home-link > img{
-		width: 220px;
+		width: 160px;
+		height: auto;
 	}
 	.Navbar.scrolled a.home-link{
 		/*width: 20vw;*/

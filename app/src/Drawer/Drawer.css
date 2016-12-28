@@ -9,6 +9,7 @@
 	/*padding-top: 15vw;*/
 	left: 100vw;
 	transition: left 0.3s ease;
+	overflow-y: auto;
 }
 #drawer.close{
 	animation: drawerClose 0.3s;
@@ -28,19 +29,6 @@
 	50% {border-top-left-radius: 0;}
 	100% {border-bottom-left-radius: 0;}
 }
-#drawer a{
-	display: block;
-	color: #3b3d4a;
-	font-size: 1.1em;
-	padding-left: 17vw;
-	line-height: 15vw;
-
-	border-bottom: 1px solid #bdbdbd;
-}
-#drawer a:hover{
-	background-color: #efefef;
-	color: #3b3d5a;
-}
 
 @media (min-width: 628px){
 	#drawer {
@@ -53,11 +41,6 @@
 	#drawer.open{
 		transition: left 0.45s ease;
 		animation: drawerOpen 0.75s;
-	}
-	#drawer a{
-		font-size: 1.3em;
-		padding-left: 12vw;
-		line-height: 10vw;
 	}
 }
 
