@@ -1,0 +1,141 @@
+
+.Navbar a{
+	position: relative;
+	display: inline-block;
+	color: #2e2e2e;
+	font-size: 4vw;
+	line-height: 15vw;
+	padding: 0 2vw;
+	cursor: pointer;
+	box-sizing: border-box;
+	/*overflow: hidden;*/
+
+	/*pointer-events: none;*/
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-font-smoothing: antialiased;
+	white-space: nowrap;
+}
+.Navbar a:not(.home-link)::before{
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -2;
+}
+.Navbar a.active {
+	box-shadow: inset 0 -5px 0 0 #E67E00;
+}
+.Navbar .dropdown-links a.active {
+	box-shadow: inset 5px 0 0 0 #E67E00;
+}
+/*.Navbar a:not(.home-link)::after{*/
+/*content: '';*/
+/*position: absolute;*/
+/*left: 50%;*/
+/*top: 0;*/
+/*background-color: #ddd;*/
+/*!*border-radius: 100%;*!*/
+/*width: 0;*/
+/*height: 200%;*/
+/*z-index: -1;*/
+/*opacity: 1;*/
+/*transition: all 0s;*/
+/*}*/
+.Navbar a:not(.home-link):hover::before{
+	background-color: #1e1e1e;
+	opacity: 0.6;
+}
+.Navbar a:not(.home-link):hover,
+.dropdown.open .dropdown-label{
+	color: #fff;
+}
+/*.Navbar a:hover::after{*/
+/*width: 100%;*/
+/*left:0;*/
+/*opacity: 0;*/
+/*transition: all 0.3s ease, opacity 0.5s ease;*/
+/*}*/
+.Navbar.scrolled a{
+	color: #fff;
+}
+
+@media  ( min-width: 628px){
+	.Navbar {
+		height: 10vw;
+	}
+	.Navbar a{
+		font-size: 4vw;
+		line-height: 10vw;
+		padding: 0 2vw;
+	}
+	.Navbar a.home-link{
+		font-size: 1.2em;
+		max-height: 10vw;
+		padding: 0 auto;
+		margin: 0 12.5vw;
+		line-height: 9vw;
+	}
+	.Navbar a.home-link > svg,
+	.Navbar a.home-link > img{
+		width: 30vw;
+	}
+	.Navbar.scrolled a.home-link{
+		/*width: 20vw;*/
+	}
+}
+@media (min-width: 992px) {
+	.Navbar a{
+		font-size: 1em;
+		line-height: 80px;
+		padding: 0 10px;
+	}
+	.Navbar a:hover{
+		font-size: 1em;
+		padding: 0 10px;
+	}
+}
+
+.has-hero #navbar:not(.scrolled) a:hover::before {
+	/*opacity: 0.3;*/
+}
+.has-hero #navbar:not(.scrolled) a:hover::after {
+	display: none;
+}
+
+
+.dropdown {
+	display: inline-block;
+	position: relative;
+}
+.dropdown > .dropdown-links {
+	position: absolute;
+	left: 0;
+	top: 100%;
+	overflow: hidden;
+	text-align: left;
+	background-color: #2e2e2e;
+	opacity: 0.97;
+	transform-origin: top left;
+	transition: transform 0.3s ease;
+}
+.dropdown > .dropdown-links a{
+	display: block;
+	color: #fff;
+	opacity: 1;
+}
+
+.dropdown.open > .dropdown-label::before {
+	background-color: #1e1e1e;
+	opacity: 0.6;
+}
+.dropdown:not(.open) > .dropdown-links {
+	transform-origin: top left;
+	transform: scaleY(0) scaleX(0.5);
+	transition: transform 0.2s ease;
+}
+.dropdown:not(.open) > .dropdown-links > a {
+	opacity: 0;
+}

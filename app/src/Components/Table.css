@@ -1,0 +1,12 @@
+table {
+	border-collapse: collapse;
+	text-align: left;
+}
+td, th {
+	padding: 0.3em 0.7em;
+	border: 1px solid #bbb;
+}
+
+thead > tr > th {
+	background-color: #eee;
+}
